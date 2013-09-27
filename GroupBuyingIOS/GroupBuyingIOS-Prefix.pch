@@ -12,5 +12,17 @@
 
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 #endif
+
+#define DEBUG true
+
+// Debug Logging
+#import "DLog.h"
+
+#import "NSString+Encoding.h"
+#import "NSDictionary+Helpers.h"
+
+// Application Settings
+#import "GBConnectionSettings.h"

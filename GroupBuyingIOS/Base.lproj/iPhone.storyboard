@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wJe-No-aFD">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="Q64-bG-Veg">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hK3-C1-rq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="oeA-Ot-Iks" customClass="GBSplashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sXU-jn-B1t"/>
+                        <viewControllerLayoutGuide type="bottom" id="lcs-dC-bvf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mcc-2v-j9S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7Do-73-pz6">
+                                <rect key="frame" x="150" y="302" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading configuration..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEm-27-wRa">
+                                <rect key="frame" x="69" y="273" width="182" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.44065604940000003" green="0.56020008070000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dnN-Bj-GGg"/>
+                    <connections>
+                        <segue destination="tRf-TR-Oul" kind="push" identifier="Show Main" id="50V-5t-WYH"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="42" y="-196"/>
+        </scene>
+        <!--Temp View Controller - Jedynka-->
+        <scene sceneID="QKa-Ag-FcX">
+            <objects>
+                <viewController title="Jedynka" id="7eu-wA-dVx" customClass="GBTempViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RGh-Pg-d0H"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hch-tX-n86"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hly-r8-TwS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSI-gc-bxc">
+                                <rect key="frame" x="111" y="297" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5" green="0.21290808580000001" blue="0.25850199880000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Jedynka" id="Bmr-ke-esC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwu-XW-bNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="-389"/>
+        </scene>
+        <!--Offer View Controller-->
+        <scene sceneID="Jng-4E-yQK">
+            <objects>
+                <viewController id="fHq-ef-JWK" customClass="GBOfferViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bjs-f8-Y8F"/>
+                        <viewControllerLayoutGuide type="bottom" id="e1A-om-W5i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YM1-Xr-Hxe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.93572491742634578" green="0.29214346904597377" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FqY-FF-g07"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5T-Jq-ETU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1970" y="-234"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="gb0-T8-6vR">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="tRf-TR-Oul" customClass="GBTabBarController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uRl-JP-ZBR"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="r18-Ld-FhH">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7eu-wA-dVx" kind="relationship" relationship="viewControllers" id="4DX-9g-VmP"/>
+                        <segue destination="gqr-x9-ccx" kind="relationship" relationship="viewControllers" id="ykb-My-muP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5O-K3-nfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472" y="-61"/>
+        </scene>
+        <!--Temp View Controller - Dwojka-->
+        <scene sceneID="1Et-cR-QdG">
+            <objects>
+                <viewController title="Dwojka" id="gqr-x9-ccx" customClass="GBTempViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="96n-p5-kXl"/>
+                        <viewControllerLayoutGuide type="bottom" id="04e-YH-uRT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L49-t8-cwS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fol-Si-gb8">
+                                <rect key="frame" x="83" y="208" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showOfferClicked:" destination="gqr-x9-ccx" eventType="touchUpInside" id="hkD-Uw-oWN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38440230500946038" green="1" blue="0.48416980915511987" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dwojka" id="Otb-C7-6Xk"/>
+                    <connections>
+                        <segue destination="fHq-ef-JWK" kind="push" identifier="Show Offer" id="sTP-71-w7s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j99-Dr-Uvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="263"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hdK-G2-sf7">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="wJe-No-aFD" customClass="GBNavigationController" colorLabel="IBBuiltInLabel-Blue" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wPK-pz-YOI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yUw-Gp-mgM">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oeA-Ot-Iks" kind="relationship" relationship="rootViewController" id="zes-pE-gka"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAg-cR-Rbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-673" y="-196"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

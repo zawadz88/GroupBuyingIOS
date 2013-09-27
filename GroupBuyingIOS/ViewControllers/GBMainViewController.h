@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GBViewController : UIViewController
+@interface GBMainViewController : UITabBarController
 
 @end
