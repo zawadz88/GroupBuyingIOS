@@ -37,6 +37,10 @@
 		214357DA17F6279900607D18 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214357D917F6279900607D18 /* CoreData.framework */; };
 		214357DC17F627A700607D18 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214357DB17F627A700607D18 /* Security.framework */; };
 		214357DF17F628CB00607D18 /* GBApiBaseTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357DE17F628CB00607D18 /* GBApiBaseTemplate.m */; };
+		214357E217F84C0C00607D18 /* GBOfferEssential.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357E117F84C0C00607D18 /* GBOfferEssential.m */; };
+		214357F617F8610100607D18 /* GBApiOfferEssentialsTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357F517F8610100607D18 /* GBApiOfferEssentialsTemplate.m */; };
+		214357F917F8AD6F00607D18 /* GBOfferTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357F817F8AD6F00607D18 /* GBOfferTableViewController.m */; };
+		214357FD17F8AEFF00607D18 /* GBOfferTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357FC17F8AEFF00607D18 /* GBOfferTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +105,15 @@
 		214357DB17F627A700607D18 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		214357DD17F628CB00607D18 /* GBApiBaseTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBApiBaseTemplate.h; path = API/GBApiBaseTemplate.h; sourceTree = "<group>"; };
 		214357DE17F628CB00607D18 /* GBApiBaseTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBApiBaseTemplate.m; path = API/GBApiBaseTemplate.m; sourceTree = "<group>"; };
+		214357E017F84C0C00607D18 /* GBOfferEssential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBOfferEssential.h; path = Model/GBOfferEssential.h; sourceTree = "<group>"; };
+		214357E117F84C0C00607D18 /* GBOfferEssential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBOfferEssential.m; path = Model/GBOfferEssential.m; sourceTree = "<group>"; };
+		214357F117F85B4B00607D18 /* GBAppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBAppConstants.h; path = Utils/GBAppConstants.h; sourceTree = "<group>"; };
+		214357F417F8610100607D18 /* GBApiOfferEssentialsTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBApiOfferEssentialsTemplate.h; path = API/GBApiOfferEssentialsTemplate.h; sourceTree = "<group>"; };
+		214357F517F8610100607D18 /* GBApiOfferEssentialsTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBApiOfferEssentialsTemplate.m; path = API/GBApiOfferEssentialsTemplate.m; sourceTree = "<group>"; };
+		214357F717F8AD6F00607D18 /* GBOfferTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBOfferTableViewController.h; sourceTree = "<group>"; };
+		214357F817F8AD6F00607D18 /* GBOfferTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBOfferTableViewController.m; sourceTree = "<group>"; };
+		214357FB17F8AEFF00607D18 /* GBOfferTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBOfferTableViewCell.h; path = Views/GBOfferTableViewCell.h; sourceTree = "<group>"; };
+		214357FC17F8AEFF00607D18 /* GBOfferTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBOfferTableViewCell.m; path = Views/GBOfferTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +184,7 @@
 				214357C017F61D8B00607D18 /* Settings */,
 				214357C417F6220F00607D18 /* Utils */,
 				214357A017F5D1CC00607D18 /* ViewControllers */,
+				214357FA17F8AE9C00607D18 /* Views */,
 				2143577C17F5CECC00607D18 /* iPhone.storyboard */,
 				2143578217F5CECC00607D18 /* Images.xcassets */,
 				2143577117F5CECC00607D18 /* Supporting Files */,
@@ -223,6 +237,8 @@
 				214357AE17F5E5E500607D18 /* GBOfferViewController.m */,
 				214357B017F5E64C00607D18 /* GBTempViewController.h */,
 				214357B117F5E64C00607D18 /* GBTempViewController.m */,
+				214357F717F8AD6F00607D18 /* GBOfferTableViewController.h */,
+				214357F817F8AD6F00607D18 /* GBOfferTableViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -234,6 +250,8 @@
 				214357B717F60FB000607D18 /* GBCity.m */,
 				214357BD17F6170B00607D18 /* GBCityConfig.h */,
 				214357BE17F6170B00607D18 /* GBCityConfig.m */,
+				214357E017F84C0C00607D18 /* GBOfferEssential.h */,
+				214357E117F84C0C00607D18 /* GBOfferEssential.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -245,6 +263,8 @@
 				214357DE17F628CB00607D18 /* GBApiBaseTemplate.m */,
 				214357BA17F616E600607D18 /* GBApiCityTemplate.h */,
 				214357BB17F616E600607D18 /* GBApiCityTemplate.m */,
+				214357F417F8610100607D18 /* GBApiOfferEssentialsTemplate.h */,
+				214357F517F8610100607D18 /* GBApiOfferEssentialsTemplate.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -263,6 +283,7 @@
 			children = (
 				214357C517F6224800607D18 /* GBURLRequest.h */,
 				214357C617F6224800607D18 /* GBURLRequest.m */,
+				214357F117F85B4B00607D18 /* GBAppConstants.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -280,6 +301,15 @@
 				214357D417F6274D00607D18 /* NSString+Encoding.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		214357FA17F8AE9C00607D18 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				214357FB17F8AEFF00607D18 /* GBOfferTableViewCell.h */,
+				214357FC17F8AEFF00607D18 /* GBOfferTableViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,10 +420,14 @@
 				214357DF17F628CB00607D18 /* GBApiBaseTemplate.m in Sources */,
 				214357BC17F616E600607D18 /* GBApiCityTemplate.m in Sources */,
 				214357AC17F5E4CF00607D18 /* GBTabBarController.m in Sources */,
+				214357E217F84C0C00607D18 /* GBOfferEssential.m in Sources */,
 				214357D817F6274D00607D18 /* NSString+Encoding.m in Sources */,
+				214357F617F8610100607D18 /* GBApiOfferEssentialsTemplate.m in Sources */,
+				214357F917F8AD6F00607D18 /* GBOfferTableViewController.m in Sources */,
 				214357C717F6224800607D18 /* GBURLRequest.m in Sources */,
 				214357BF17F6170B00607D18 /* GBCityConfig.m in Sources */,
 				214357A917F5D79A00607D18 /* GBSplashViewController.m in Sources */,
+				214357FD17F8AEFF00607D18 /* GBOfferTableViewCell.m in Sources */,
 				214357B817F60FB000607D18 /* GBCity.m in Sources */,
 				214357AF17F5E5E500607D18 /* GBOfferViewController.m in Sources */,
 				2143577B17F5CECC00607D18 /* GBAppDelegate.m in Sources */,

@@ -59,7 +59,7 @@
                  [delegate getCityConfigDidFailWithError:error];
              });
          } else if (statusCode != 200) {
-             [self requestDidNotSucceedWithDefaultMessage:@"A problem occurred while retrieving the profile data." response:response];
+             [self requestDidNotSucceedWithDefaultMessage:@"A problem occurred while retrieving the configuration." response:response];
          }
      }];
 }

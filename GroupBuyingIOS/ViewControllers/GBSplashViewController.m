@@ -7,6 +7,7 @@
 //
 
 #import "GBSplashViewController.h"
+#import "GBApiCityTemplate.h"
 
 @interface GBSplashViewController () <GBApiCityTemplateDelegate>
 
@@ -26,20 +27,21 @@
         [self showMainController];
     });
     [[GBApiCityTemplate sharedInstance] getCityConfigWithDelegate:self];
+
 }
 
-- (void) showMainController
+- (void)showMainController
 {
     DLog(@"Showing");
     [self performSegueWithIdentifier:@"Show Main" sender:nil];
 }
 
-- (void) getCityConfigDidSucceedWithResults:(GBCityConfig *)cityConfig
+- (void)getCityConfigDidSucceedWithResults:(GBCityConfig *)cityConfig
 {
     DLog(@"Yeahhhh");
 }
 
-- (void) getCityConfigDidFailWithError:(NSError *)error
+- (void)getCityConfigDidFailWithError:(NSError *)error
 {
     DLog(@"Oh no!");
 }

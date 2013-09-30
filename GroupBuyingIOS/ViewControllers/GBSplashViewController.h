@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GBApiCityTemplate.h"
 
 @interface GBSplashViewController : UIViewController
 
-- (void) showMainController;
+- (void)showMainController;
 
 @end
