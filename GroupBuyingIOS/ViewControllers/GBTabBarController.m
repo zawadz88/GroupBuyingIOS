@@ -14,10 +14,4 @@
 
 @implementation GBTabBarController
 
-- (void)viewWillAppear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:NO];
-    self.navigationItem.hidesBackButton = YES;
-}
-
-
 @end

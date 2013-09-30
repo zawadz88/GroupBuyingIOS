@@ -10,13 +10,21 @@
 #import "GBOfferTableViewCell.h"
 #import "GBApiOfferEssentialsTemplate.h"
 
+#define OFFERS_PAGE_SIZE 10
+#define HEIGHT_FROM_BOTTOM_TO_FETCH_NEW_OFFERS 500
+
 @interface GBOfferTableViewController() <GBApiOfferEssentialsTemplateDelegate>
 
 @property (strong, nonatomic) NSMutableArray *offers; //of GBOfferEssential *
 
+@property (atomic) BOOL isLoading;
+@property (atomic) BOOL moreOffersAvailable;
+@property (atomic) NSInteger currentPage;
+
 @end
 
 @implementation GBOfferTableViewController
+
 
 - (NSArray *) offers
 {
@@ -29,7 +37,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[GBApiOfferEssentialsTemplate sharedInstance] getOffersByCategory:@"shopping" AndPageNumber:0 WithDelegate:self];
+    self.isLoading = YES;
+    self.moreOffersAvailable = YES;
+    self.currentPage = -1;
+    [[GBApiOfferEssentialsTemplate sharedInstance] getOffersByCategory:@"shopping" AndPageNumber:(self.currentPage + 1) WithDelegate:self];
     [self.refreshControl addTarget:self action:@selector(refreshContent) forControlEvents:UIControlEventValueChanged];
     self.refreshControl.tintColor = UIColor.blueColor;
     // Uncomment the following line to preserve selection between presentations.
@@ -41,9 +52,12 @@
 
 - (void)refreshContent
 {
+    self.isLoading = YES;
+    self.moreOffersAvailable = YES;
+    self.currentPage = -1;
     [self.offers removeAllObjects];
     [self.tableView reloadData];
-    [[GBApiOfferEssentialsTemplate sharedInstance] getOffersByCategory:@"shopping" AndPageNumber:0 WithDelegate:self];
+    [[GBApiOfferEssentialsTemplate sharedInstance] getOffersByCategory:@"shopping" AndPageNumber:(self.currentPage + 1)  WithDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,60 +95,14 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
-
 - (void)getOfferEssentialsDidSucceedWithResults:(NSArray *)newOffers
 {
     DLog(@"Yeahhhh2");
+    self.isLoading = NO;
+    if(!newOffers || [newOffers count] < OFFERS_PAGE_SIZE) {
+        self.moreOffersAvailable = NO;
+    }
+    self.currentPage++;
     [self.offers addObjectsFromArray:newOffers];
     [self.tableView reloadData];
     if ([self.refreshControl isRefreshing]) {
@@ -144,9 +112,21 @@
 
 - (void)getOfferEssentialsDidFailWithError:(NSError *)error
 {
+    self.isLoading = NO;
     DLog(@"Oh no2!");
     if ([self.refreshControl isRefreshing]) {
         [self.refreshControl endRefreshing];
+    }
+}
+
+- (void) scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat actualPosition = scrollView.contentOffset.y;
+    CGFloat contentHeight = scrollView.contentSize.height - HEIGHT_FROM_BOTTOM_TO_FETCH_NEW_OFFERS;
+    if (actualPosition >= contentHeight && !self.isLoading && self.moreOffersAvailable) {
+        NSLog(@"fetching some new content...");
+        self.isLoading = YES;
+        [[GBApiOfferEssentialsTemplate sharedInstance] getOffersByCategory:@"shopping" AndPageNumber:(self.currentPage + 1) WithDelegate:self];
     }
 }
 

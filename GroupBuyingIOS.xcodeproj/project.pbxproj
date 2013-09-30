@@ -20,7 +20,6 @@
 		2143578C17F5CECC00607D18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2143576E17F5CECC00607D18 /* UIKit.framework */; };
 		2143579417F5CECC00607D18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2143579217F5CECC00607D18 /* InfoPlist.strings */; };
 		2143579617F5CECC00607D18 /* GroupBuyingIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2143579517F5CECC00607D18 /* GroupBuyingIOSTests.m */; };
-		214357A617F5D5E100607D18 /* GBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357A517F5D5E100607D18 /* GBNavigationController.m */; };
 		214357A917F5D79A00607D18 /* GBSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357A817F5D79A00607D18 /* GBSplashViewController.m */; };
 		214357AC17F5E4CF00607D18 /* GBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357AB17F5E4CF00607D18 /* GBTabBarController.m */; };
 		214357AF17F5E5E500607D18 /* GBOfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357AE17F5E5E500607D18 /* GBOfferViewController.m */; };
@@ -71,8 +70,6 @@
 		2143579117F5CECC00607D18 /* GroupBuyingIOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GroupBuyingIOSTests-Info.plist"; sourceTree = "<group>"; };
 		2143579317F5CECC00607D18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2143579517F5CECC00607D18 /* GroupBuyingIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupBuyingIOSTests.m; sourceTree = "<group>"; };
-		214357A417F5D5E100607D18 /* GBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBNavigationController.h; sourceTree = "<group>"; };
-		214357A517F5D5E100607D18 /* GBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBNavigationController.m; sourceTree = "<group>"; };
 		214357A717F5D79A00607D18 /* GBSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBSplashViewController.h; sourceTree = "<group>"; };
 		214357A817F5D79A00607D18 /* GBSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBSplashViewController.m; sourceTree = "<group>"; };
 		214357AA17F5E4CF00607D18 /* GBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBTabBarController.h; sourceTree = "<group>"; };
@@ -227,8 +224,6 @@
 		214357A017F5D1CC00607D18 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				214357A417F5D5E100607D18 /* GBNavigationController.h */,
-				214357A517F5D5E100607D18 /* GBNavigationController.m */,
 				214357A717F5D79A00607D18 /* GBSplashViewController.h */,
 				214357A817F5D79A00607D18 /* GBSplashViewController.m */,
 				214357AA17F5E4CF00607D18 /* GBTabBarController.h */,
@@ -412,7 +407,6 @@
 			files = (
 				214357B217F5E64C00607D18 /* GBTempViewController.m in Sources */,
 				214357C317F61DB900607D18 /* GBConnectionSettings.m in Sources */,
-				214357A617F5D5E100607D18 /* GBNavigationController.m in Sources */,
 				214357D517F6274D00607D18 /* NSData+Base64.m in Sources */,
 				214357D617F6274D00607D18 /* NSDate+Helpers.m in Sources */,
 				2143577717F5CECC00607D18 /* main.m in Sources */,
