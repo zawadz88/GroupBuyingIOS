@@ -29,8 +29,9 @@
     NSURL *url = [GBConnectionSettings urlWithFormat:@"/cities/city-config"];
     NSMutableURLRequest *request = [[GBURLRequest alloc] initWithURL:url];
 	[request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setTimeoutInterval:DEFAULT_REQUEST_TIMEOUT];
 	DLog(@"%@", request);
-	
+   
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[[NSOperationQueue alloc] init]

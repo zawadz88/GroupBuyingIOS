@@ -40,6 +40,13 @@
 		214357F617F8610100607D18 /* GBApiOfferEssentialsTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357F517F8610100607D18 /* GBApiOfferEssentialsTemplate.m */; };
 		214357F917F8AD6F00607D18 /* GBOfferTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357F817F8AD6F00607D18 /* GBOfferTableViewController.m */; };
 		214357FD17F8AEFF00607D18 /* GBOfferTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357FC17F8AEFF00607D18 /* GBOfferTableViewCell.m */; };
+		2143580717FB315400607D18 /* GBRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2143580617FB315400607D18 /* GBRefreshFooterView.m */; };
+		2143580B17FB319600607D18 /* GBRefreshFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2143580A17FB319600607D18 /* GBRefreshFooterView.xib */; };
+		2143580D17FB406F00607D18 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2143580C17FB406F00607D18 /* SystemConfiguration.framework */; };
+		2143581017FB40A400607D18 /* GBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2143580F17FB40A400607D18 /* GBUtils.m */; };
+		2143581317FB417400607D18 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2143581217FB417400607D18 /* Reachability.m */; };
+		2143581617FB433C00607D18 /* GBLoadingFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2143581517FB433C00607D18 /* GBLoadingFooterView.m */; };
+		2143581817FB436600607D18 /* GBLoadingFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2143581717FB436600607D18 /* GBLoadingFooterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +118,17 @@
 		214357F817F8AD6F00607D18 /* GBOfferTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBOfferTableViewController.m; sourceTree = "<group>"; };
 		214357FB17F8AEFF00607D18 /* GBOfferTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBOfferTableViewCell.h; path = Views/GBOfferTableViewCell.h; sourceTree = "<group>"; };
 		214357FC17F8AEFF00607D18 /* GBOfferTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBOfferTableViewCell.m; path = Views/GBOfferTableViewCell.m; sourceTree = "<group>"; };
+		2143580517FB315400607D18 /* GBRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBRefreshFooterView.h; path = Views/GBRefreshFooterView.h; sourceTree = "<group>"; };
+		2143580617FB315400607D18 /* GBRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBRefreshFooterView.m; path = Views/GBRefreshFooterView.m; sourceTree = "<group>"; };
+		2143580A17FB319600607D18 /* GBRefreshFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GBRefreshFooterView.xib; path = Views/GBRefreshFooterView.xib; sourceTree = "<group>"; };
+		2143580C17FB406F00607D18 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2143580E17FB40A400607D18 /* GBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBUtils.h; path = Utils/GBUtils.h; sourceTree = "<group>"; };
+		2143580F17FB40A400607D18 /* GBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBUtils.m; path = Utils/GBUtils.m; sourceTree = "<group>"; };
+		2143581117FB417400607D18 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Utils/Reachability.h; sourceTree = "<group>"; };
+		2143581217FB417400607D18 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Utils/Reachability.m; sourceTree = "<group>"; };
+		2143581417FB433C00607D18 /* GBLoadingFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBLoadingFooterView.h; path = Views/GBLoadingFooterView.h; sourceTree = "<group>"; };
+		2143581517FB433C00607D18 /* GBLoadingFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBLoadingFooterView.m; path = Views/GBLoadingFooterView.m; sourceTree = "<group>"; };
+		2143581717FB436600607D18 /* GBLoadingFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GBLoadingFooterView.xib; path = Views/GBLoadingFooterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2143580D17FB406F00607D18 /* SystemConfiguration.framework in Frameworks */,
 				214357DC17F627A700607D18 /* Security.framework in Frameworks */,
 				214357DA17F6279900607D18 /* CoreData.framework in Frameworks */,
 				2143576D17F5CECC00607D18 /* CoreGraphics.framework in Frameworks */,
@@ -161,6 +180,7 @@
 		2143576917F5CECC00607D18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2143580C17FB406F00607D18 /* SystemConfiguration.framework */,
 				214357DB17F627A700607D18 /* Security.framework */,
 				214357D917F6279900607D18 /* CoreData.framework */,
 				214357B317F5F2BE00607D18 /* CoreLocation.framework */,
@@ -276,9 +296,13 @@
 		214357C417F6220F00607D18 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2143581117FB417400607D18 /* Reachability.h */,
+				2143581217FB417400607D18 /* Reachability.m */,
 				214357C517F6224800607D18 /* GBURLRequest.h */,
 				214357C617F6224800607D18 /* GBURLRequest.m */,
 				214357F117F85B4B00607D18 /* GBAppConstants.h */,
+				2143580E17FB40A400607D18 /* GBUtils.h */,
+				2143580F17FB40A400607D18 /* GBUtils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -303,6 +327,12 @@
 			children = (
 				214357FB17F8AEFF00607D18 /* GBOfferTableViewCell.h */,
 				214357FC17F8AEFF00607D18 /* GBOfferTableViewCell.m */,
+				2143580517FB315400607D18 /* GBRefreshFooterView.h */,
+				2143580617FB315400607D18 /* GBRefreshFooterView.m */,
+				2143580A17FB319600607D18 /* GBRefreshFooterView.xib */,
+				2143581417FB433C00607D18 /* GBLoadingFooterView.h */,
+				2143581517FB433C00607D18 /* GBLoadingFooterView.m */,
+				2143581717FB436600607D18 /* GBLoadingFooterView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -386,6 +416,8 @@
 			files = (
 				2143578317F5CECC00607D18 /* Images.xcassets in Resources */,
 				2143577517F5CECC00607D18 /* InfoPlist.strings in Resources */,
+				2143581817FB436600607D18 /* GBLoadingFooterView.xib in Resources */,
+				2143580B17FB319600607D18 /* GBRefreshFooterView.xib in Resources */,
 				2143577E17F5CECC00607D18 /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,12 +438,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				214357B217F5E64C00607D18 /* GBTempViewController.m in Sources */,
+				2143581617FB433C00607D18 /* GBLoadingFooterView.m in Sources */,
 				214357C317F61DB900607D18 /* GBConnectionSettings.m in Sources */,
 				214357D517F6274D00607D18 /* NSData+Base64.m in Sources */,
 				214357D617F6274D00607D18 /* NSDate+Helpers.m in Sources */,
 				2143577717F5CECC00607D18 /* main.m in Sources */,
 				214357D717F6274D00607D18 /* NSDictionary+Helpers.m in Sources */,
 				214357DF17F628CB00607D18 /* GBApiBaseTemplate.m in Sources */,
+				2143580717FB315400607D18 /* GBRefreshFooterView.m in Sources */,
 				214357BC17F616E600607D18 /* GBApiCityTemplate.m in Sources */,
 				214357AC17F5E4CF00607D18 /* GBTabBarController.m in Sources */,
 				214357E217F84C0C00607D18 /* GBOfferEssential.m in Sources */,
@@ -421,9 +455,11 @@
 				214357C717F6224800607D18 /* GBURLRequest.m in Sources */,
 				214357BF17F6170B00607D18 /* GBCityConfig.m in Sources */,
 				214357A917F5D79A00607D18 /* GBSplashViewController.m in Sources */,
+				2143581317FB417400607D18 /* Reachability.m in Sources */,
 				214357FD17F8AEFF00607D18 /* GBOfferTableViewCell.m in Sources */,
 				214357B817F60FB000607D18 /* GBCity.m in Sources */,
 				214357AF17F5E5E500607D18 /* GBOfferViewController.m in Sources */,
+				2143581017FB40A400607D18 /* GBUtils.m in Sources */,
 				2143577B17F5CECC00607D18 /* GBAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

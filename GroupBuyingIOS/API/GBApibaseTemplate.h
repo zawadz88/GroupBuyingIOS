@@ -10,6 +10,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define DEFAULT_REQUEST_TIMEOUT 5.0
+
 @interface GBApiBaseTemplate : NSObject
 
 void ProcessError(NSString* action, NSError* error);

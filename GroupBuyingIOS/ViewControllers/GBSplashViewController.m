@@ -35,8 +35,8 @@ NSTimeInterval startTime;
 
 - (void)showMainController
 {
+    DLog(@"showMainController");
     if(self.myCity && self.cities) {
-        DLog(@"Showing");
         [self performSegueWithIdentifier:@"Show Main" sender:nil];
     }
 }
@@ -55,6 +55,7 @@ NSTimeInterval startTime;
 - (void)getCityConfigDidFailWithError:(NSError *)error
 {
     DLog(@"Oh no!");
+    [self performSegueWithIdentifier:@"Show Main" sender:nil];
 }
 
 @end

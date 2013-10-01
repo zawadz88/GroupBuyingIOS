@@ -30,6 +30,7 @@
     NSMutableURLRequest *request = [[GBURLRequest alloc] initWithURL:url];
 	
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+	[request setTimeoutInterval:DEFAULT_REQUEST_TIMEOUT];
 	DLog(@"%@", request);
 	
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
