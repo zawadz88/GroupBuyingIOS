@@ -9,7 +9,11 @@
 #import "GBOfferViewPagerController.h"
 #import "GBOfferTableViewController.h"
 
-#define DEFAULT_PAGE_COUNT
+#define PAGE_CONTROL_SHOW_ANIMATION_DURATION 0.3
+#define PAGE_CONTROL_SHOW_ANIMATION_DELAY 0.0
+#define PAGE_CONTROL_HIDE_ANIMATION_DURATION 0.5
+#define PAGE_CONTROL_HIDE_ANIMATION_DELAY 1.0
+
 @interface GBOfferViewPagerController () <ViewPagerDataSource, ViewPagerDelegate>
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
@@ -34,9 +38,6 @@
     }
     
     [super viewDidLoad];
-    NSLog(@"Child loaded with parent: %@", self.parentViewController);
-    self.pageControl.numberOfPages = 1;
-    self.pageControl.currentPage = 0;
     self.pageControl.alpha = 0;
     
 }
@@ -83,8 +84,8 @@
 - (void)viewPager:(ViewPagerController *)viewPager contentMovedByRatio:(CGFloat)movedRatio
 {
     if (movedRatio == 0) {
-        [UIView animateWithDuration:0.5
-                              delay:1.0
+        [UIView animateWithDuration:PAGE_CONTROL_HIDE_ANIMATION_DURATION
+                              delay:PAGE_CONTROL_HIDE_ANIMATION_DELAY
                             options:UIViewAnimationOptionLayoutSubviews
                          animations:^(void) {
                              self.pageControl.alpha = 0;
@@ -92,8 +93,8 @@
                          completion:nil];
 
     } else {
-        [UIView animateWithDuration:0.5
-                              delay:0.0
+        [UIView animateWithDuration:PAGE_CONTROL_SHOW_ANIMATION_DURATION
+                              delay:PAGE_CONTROL_SHOW_ANIMATION_DELAY
                             options:UIViewAnimationOptionBeginFromCurrentState
                          animations:^(void) {
                              self.pageControl.alpha = 1;

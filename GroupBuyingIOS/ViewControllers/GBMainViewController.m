@@ -13,6 +13,10 @@
 #import "GBViewPagerIndicator.h"
 #import "GBOfferViewController.h"
 #import "GBOfferEssential.h"
+
+#define NAVIGATION_TITLE_RECT_WIDTH 180
+#define NAVIGATION_TITLE_RECT_HEIGHT 44
+
 @interface GBMainViewController ()<ViewPagerIndicatorDelegate>
 
 @property(strong, nonatomic) GBOfferViewPagerController *viewPager;
@@ -55,7 +59,7 @@
         [self.viewPager reloadData];
     }
     
-    CGRect navigationTitleRect = CGRectMake(0, 0, 200, 45);
+    CGRect navigationTitleRect = CGRectMake(0, 0, NAVIGATION_TITLE_RECT_WIDTH, NAVIGATION_TITLE_RECT_HEIGHT);
     self.navigationTitleView = [[GBViewPagerIndicator alloc] initWithFrame:navigationTitleRect];
     self.navigationItem.titleView = self.navigationTitleView;
     self.navigationTitleView.label.text = [NSString stringWithFormat:@"Title: %@", @"A"];
@@ -76,7 +80,6 @@
 
 - (void)viewPager:(ViewPagerController *)viewPager contentChangedToIndex:(NSUInteger)index
 {
-    NSLog(@"New title: %@", [self.viewPager.pages objectAtIndex:index]);
     self.navigationTitleView.label.text = [NSString stringWithFormat:@"Title: %@", [self.viewPager.pages objectAtIndex:index]];
     self.navigationTitleView.label.alpha = 1;
 }

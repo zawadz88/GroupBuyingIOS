@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TTUITableViewZoomController.h"
 
-@interface GBOfferTableViewController : TTUITableViewZoomController
+@interface GBOfferTableViewController : UITableViewController
 
 @property (strong, nonatomic) UIViewController *parentVC;
 
