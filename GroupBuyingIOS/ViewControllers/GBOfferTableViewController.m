@@ -19,6 +19,9 @@
 #define FOOTER_VIEW_HEIGHT 60
 #define FOOTER_VIEW_WIDTH 320
 
+#define CUSTOM_CELL_ZOOM_X_SCALE_FACTOR 2.0
+#define CUSTOM_CELL_ZOOM_Y_SCALE_FACTOR 1.5
+
 @interface GBOfferTableViewController() <GBApiOfferEssentialsTemplateDelegate, GBRefreshFooterViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *offers; //of GBOfferEssential *
@@ -44,6 +47,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.cellZoomXScaleFactor = [NSNumber numberWithDouble:CUSTOM_CELL_ZOOM_X_SCALE_FACTOR];
+    self.cellZoomYScaleFactor = [NSNumber numberWithDouble:CUSTOM_CELL_ZOOM_Y_SCALE_FACTOR];
     
     self.isLoading = YES;
     self.internetAvailable = YES;
