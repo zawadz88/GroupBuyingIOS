@@ -13,6 +13,7 @@
 #import "GBLoadingFooterView.h"
 #import "GBOfferViewController.h"
 #import "UIImageView+WebCache.h"
+#import "UIImage+MultiFormat.h"
 
 #define OFFERS_PAGE_SIZE 10
 
@@ -101,25 +102,11 @@
     [cell.imageView setImageWithURL:[NSURL URLWithString:offer.imageUrl]
                    placeholderImage:[UIImage imageNamed:@"image_stub.jpg"]
                           completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
-                              if (cacheType == SDImageCacheTypeNone) {                                  
-                                  [self.tableView reloadData];
-                              }
+                              cell.imageView.image = [image imageByScalingAndCroppingForSize:CGSizeMake(OFFER_ESSENTIAL_CELL_WIDTH, OFFER_ESSENTIAL_CELL_HEIGHT)];
                           }];
     
     return cell;
 }
-//
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    CGFloat height = 200.0;
-//    GBOfferEssential *offer = (GBOfferEssential *)[self.offers objectAtIndex:indexPath.row];
-//    UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:[[NSURL URLWithString:offer.imageUrl] absoluteString]];
-//    DLog(@"Image: %@", image);
-//    if (image) {
-//        height = image.size.height * 320 / image.size.width;
-//    }
-//    return height;
-//}
 
 - (void)getOfferEssentialsDidSucceedWithResults:(NSArray *)newOffers
 {

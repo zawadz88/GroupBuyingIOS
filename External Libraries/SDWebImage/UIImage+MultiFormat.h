@@ -12,4 +12,6 @@
 
 + (UIImage *)sd_imageWithData:(NSData *)data;
 
+- (UIImage*)imageByScalingAndCroppingForSize:(CGSize)targetSize;
+
 @end

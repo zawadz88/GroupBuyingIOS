@@ -8,9 +8,6 @@
 
 #import "GBOfferTableViewCell.h"
 
-#define CELL_WIDTH 320
-#define CELL_HEIGHT 200
-
 @implementation GBOfferTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -40,7 +37,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.imageView.frame = CGRectMake(0, 0, CELL_WIDTH, CELL_HEIGHT);
+    self.imageView.frame = CGRectMake(0, 0, OFFER_ESSENTIAL_CELL_WIDTH, OFFER_ESSENTIAL_CELL_HEIGHT);
 }
 
 @end
