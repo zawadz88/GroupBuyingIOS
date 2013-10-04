@@ -74,6 +74,8 @@
 		2157BBFC17FF306A00E1A5AC /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2157BBEB17FF306A00E1A5AC /* UIImage+WebP.m */; };
 		2157BBFD17FF306A00E1A5AC /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2157BBED17FF306A00E1A5AC /* UIImageView+WebCache.m */; };
 		2157BBFF17FF31FA00E1A5AC /* image_stub.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2157BBFE17FF31FA00E1A5AC /* image_stub.jpg */; };
+		2157BC0217FF5C3B00E1A5AC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2157BC0017FF5C3B00E1A5AC /* LICENSE */; };
+		2157BC0317FF5C3B00E1A5AC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2157BC0117FF5C3B00E1A5AC /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +205,8 @@
 		2157BBEC17FF306A00E1A5AC /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		2157BBED17FF306A00E1A5AC /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		2157BBFE17FF31FA00E1A5AC /* image_stub.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image_stub.jpg; path = Images/image_stub.jpg; sourceTree = "<group>"; };
+		2157BC0017FF5C3B00E1A5AC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2157BC0117FF5C3B00E1A5AC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +259,8 @@
 		2143575E17F5CECC00607D18 = {
 			isa = PBXGroup;
 			children = (
+				2157BC0017FF5C3B00E1A5AC /* LICENSE */,
+				2157BC0117FF5C3B00E1A5AC /* README.md */,
 				211F4A2717FDCEB100D7C29F /* External Libraries */,
 				2143577017F5CECC00607D18 /* GroupBuyingIOS */,
 				2143578F17F5CECC00607D18 /* GroupBuyingIOSTests */,
@@ -588,7 +594,9 @@
 				2157BBF117FF306A00E1A5AC /* README.md in Resources */,
 				2143577517F5CECC00607D18 /* InfoPlist.strings in Resources */,
 				2143581817FB436600607D18 /* GBLoadingFooterView.xib in Resources */,
+				2157BC0217FF5C3B00E1A5AC /* LICENSE in Resources */,
 				2157BBCD17FF134200E1A5AC /* GBViewPagerIndicator.xib in Resources */,
+				2157BC0317FF5C3B00E1A5AC /* README.md in Resources */,
 				2143580B17FB319600607D18 /* GBRefreshFooterView.xib in Resources */,
 				2143577E17F5CECC00607D18 /* iPhone.storyboard in Resources */,
 			);
