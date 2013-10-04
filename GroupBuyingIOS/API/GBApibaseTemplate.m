@@ -74,7 +74,7 @@
                                                        delegate:delegate
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:otherButtonTitle, nil];
-        [alert show];
+        //[alert show];
     });
 }
 

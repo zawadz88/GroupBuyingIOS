@@ -1,18 +1,17 @@
 //
-//  GBLoadingFooterView.m
+//  GBViewPagerIndicator.m
 //  GroupBuyingIOS
 //
-//  Created by Piotr Zawadzki on 01.10.2013.
+//  Created by Piotr Zawadzki on 04.10.2013.
 //  Copyright (c) 2013 Piotr Zawadzki. All rights reserved.
 //
 
-#import "GBLoadingFooterView.h"
+#import "GBViewPagerIndicator.h"
 
-@implementation GBLoadingFooterView
-
+@implementation GBViewPagerIndicator
 
 - (void)awakeFromNib {
-    [[NSBundle mainBundle] loadNibNamed:@"GBLoadingFooterView" owner:self options:nil];
+    [[NSBundle mainBundle] loadNibNamed:@"GBViewPagerIndicator" owner:self options:nil];
     [self addSubview: self.contentView];
 }
 
@@ -20,7 +19,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [[NSBundle mainBundle] loadNibNamed:@"GBLoadingFooterView" owner:self options:nil];
+        [[NSBundle mainBundle] loadNibNamed:@"GBViewPagerIndicator" owner:self options:nil];
         [self addSubview: self.contentView];
     }
     return self;

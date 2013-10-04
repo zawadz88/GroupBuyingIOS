@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		211F4A2B17FDCED600D7C29F /* TTUITableViewZoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 211F4A2A17FDCED600D7C29F /* TTUITableViewZoomController.m */; };
 		2143576B17F5CECC00607D18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2143576A17F5CECC00607D18 /* Foundation.framework */; };
 		2143576D17F5CECC00607D18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2143576C17F5CECC00607D18 /* CoreGraphics.framework */; };
 		2143576F17F5CECC00607D18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2143576E17F5CECC00607D18 /* UIKit.framework */; };
@@ -21,7 +22,6 @@
 		2143579417F5CECC00607D18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2143579217F5CECC00607D18 /* InfoPlist.strings */; };
 		2143579617F5CECC00607D18 /* GroupBuyingIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2143579517F5CECC00607D18 /* GroupBuyingIOSTests.m */; };
 		214357A917F5D79A00607D18 /* GBSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357A817F5D79A00607D18 /* GBSplashViewController.m */; };
-		214357AC17F5E4CF00607D18 /* GBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357AB17F5E4CF00607D18 /* GBTabBarController.m */; };
 		214357AF17F5E5E500607D18 /* GBOfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357AE17F5E5E500607D18 /* GBOfferViewController.m */; };
 		214357B217F5E64C00607D18 /* GBTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357B117F5E64C00607D18 /* GBTempViewController.m */; };
 		214357B817F60FB000607D18 /* GBCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 214357B717F60FB000607D18 /* GBCity.m */; };
@@ -47,6 +47,16 @@
 		2143581317FB417400607D18 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2143581217FB417400607D18 /* Reachability.m */; };
 		2143581617FB433C00607D18 /* GBLoadingFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2143581517FB433C00607D18 /* GBLoadingFooterView.m */; };
 		2143581817FB436600607D18 /* GBLoadingFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2143581717FB436600607D18 /* GBLoadingFooterView.xib */; };
+		2143581B17FC8BA700607D18 /* navigation-bar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2143581A17FC8BA700607D18 /* navigation-bar-bg.png */; };
+		2143581E17FC8EC300607D18 /* UIBarButtonItem+ProjectButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 2143581D17FC8EC300607D18 /* UIBarButtonItem+ProjectButtons.m */; };
+		2143582117FC8F1D00607D18 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2143581F17FC8F1D00607D18 /* backButton.png */; };
+		2143582217FC8F1D00607D18 /* backButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2143582017FC8F1D00607D18 /* backButton@2x.png */; };
+		2157BBC117FECC6500E1A5AC /* GBOfferViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2157BBBE17FECC6500E1A5AC /* GBOfferViewPagerController.m */; };
+		2157BBC217FECC6500E1A5AC /* GBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2157BBC017FECC6500E1A5AC /* GBMainViewController.m */; };
+		2157BBC717FED07D00E1A5AC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2157BBC417FED07D00E1A5AC /* README.md */; };
+		2157BBC817FED07D00E1A5AC /* ViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2157BBC617FED07D00E1A5AC /* ViewPagerController.m */; };
+		2157BBCB17FF132500E1A5AC /* GBViewPagerIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2157BBCA17FF132500E1A5AC /* GBViewPagerIndicator.m */; };
+		2157BBCD17FF134200E1A5AC /* GBViewPagerIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2157BBCC17FF134200E1A5AC /* GBViewPagerIndicator.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		211F4A2917FDCED600D7C29F /* TTUITableViewZoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUITableViewZoomController.h; sourceTree = "<group>"; };
+		211F4A2A17FDCED600D7C29F /* TTUITableViewZoomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUITableViewZoomController.m; sourceTree = "<group>"; };
 		2143576717F5CECC00607D18 /* GroupBuyingIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupBuyingIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2143576A17F5CECC00607D18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2143576C17F5CECC00607D18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,8 +91,6 @@
 		2143579517F5CECC00607D18 /* GroupBuyingIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupBuyingIOSTests.m; sourceTree = "<group>"; };
 		214357A717F5D79A00607D18 /* GBSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBSplashViewController.h; sourceTree = "<group>"; };
 		214357A817F5D79A00607D18 /* GBSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBSplashViewController.m; sourceTree = "<group>"; };
-		214357AA17F5E4CF00607D18 /* GBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBTabBarController.h; sourceTree = "<group>"; };
-		214357AB17F5E4CF00607D18 /* GBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBTabBarController.m; sourceTree = "<group>"; };
 		214357AD17F5E5E500607D18 /* GBOfferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBOfferViewController.h; sourceTree = "<group>"; };
 		214357AE17F5E5E500607D18 /* GBOfferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBOfferViewController.m; sourceTree = "<group>"; };
 		214357B017F5E64C00607D18 /* GBTempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBTempViewController.h; sourceTree = "<group>"; };
@@ -129,6 +139,21 @@
 		2143581417FB433C00607D18 /* GBLoadingFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBLoadingFooterView.h; path = Views/GBLoadingFooterView.h; sourceTree = "<group>"; };
 		2143581517FB433C00607D18 /* GBLoadingFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBLoadingFooterView.m; path = Views/GBLoadingFooterView.m; sourceTree = "<group>"; };
 		2143581717FB436600607D18 /* GBLoadingFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GBLoadingFooterView.xib; path = Views/GBLoadingFooterView.xib; sourceTree = "<group>"; };
+		2143581A17FC8BA700607D18 /* navigation-bar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-bar-bg.png"; path = "Images/navigation-bar-bg.png"; sourceTree = "<group>"; };
+		2143581C17FC8EC300607D18 /* UIBarButtonItem+ProjectButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+ProjectButtons.h"; path = "Categories/UIBarButtonItem+ProjectButtons.h"; sourceTree = "<group>"; };
+		2143581D17FC8EC300607D18 /* UIBarButtonItem+ProjectButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+ProjectButtons.m"; path = "Categories/UIBarButtonItem+ProjectButtons.m"; sourceTree = "<group>"; };
+		2143581F17FC8F1D00607D18 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButton.png; path = Images/backButton.png; sourceTree = "<group>"; };
+		2143582017FC8F1D00607D18 /* backButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backButton@2x.png"; path = "Images/backButton@2x.png"; sourceTree = "<group>"; };
+		2157BBBD17FECC6500E1A5AC /* GBOfferViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBOfferViewPagerController.h; sourceTree = "<group>"; };
+		2157BBBE17FECC6500E1A5AC /* GBOfferViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBOfferViewPagerController.m; sourceTree = "<group>"; };
+		2157BBBF17FECC6500E1A5AC /* GBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBMainViewController.h; sourceTree = "<group>"; };
+		2157BBC017FECC6500E1A5AC /* GBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBMainViewController.m; sourceTree = "<group>"; };
+		2157BBC417FED07D00E1A5AC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		2157BBC517FED07D00E1A5AC /* ViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPagerController.h; sourceTree = "<group>"; };
+		2157BBC617FED07D00E1A5AC /* ViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPagerController.m; sourceTree = "<group>"; };
+		2157BBC917FF132500E1A5AC /* GBViewPagerIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBViewPagerIndicator.h; path = Views/GBViewPagerIndicator.h; sourceTree = "<group>"; };
+		2157BBCA17FF132500E1A5AC /* GBViewPagerIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBViewPagerIndicator.m; path = Views/GBViewPagerIndicator.m; sourceTree = "<group>"; };
+		2157BBCC17FF134200E1A5AC /* GBViewPagerIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GBViewPagerIndicator.xib; path = Views/GBViewPagerIndicator.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,9 +183,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		211F4A2717FDCEB100D7C29F /* External Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				2157BBC317FED07D00E1A5AC /* ICViewPager */,
+				211F4A2817FDCED600D7C29F /* UITableViewZoomController */,
+			);
+			name = "External Libraries";
+			sourceTree = "<group>";
+		};
+		211F4A2817FDCED600D7C29F /* UITableViewZoomController */ = {
+			isa = PBXGroup;
+			children = (
+				211F4A2917FDCED600D7C29F /* TTUITableViewZoomController.h */,
+				211F4A2A17FDCED600D7C29F /* TTUITableViewZoomController.m */,
+			);
+			name = UITableViewZoomController;
+			path = "External Libraries/UITableViewZoomController";
+			sourceTree = "<group>";
+		};
 		2143575E17F5CECC00607D18 = {
 			isa = PBXGroup;
 			children = (
+				211F4A2717FDCEB100D7C29F /* External Libraries */,
 				2143577017F5CECC00607D18 /* GroupBuyingIOS */,
 				2143578F17F5CECC00607D18 /* GroupBuyingIOSTests */,
 				2143576917F5CECC00607D18 /* Frameworks */,
@@ -212,6 +257,7 @@
 		2143577117F5CECC00607D18 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2143581917FC8B9600607D18 /* Images */,
 				214357C817F6238800607D18 /* DLog.h */,
 				2143577917F5CECC00607D18 /* GBAppDelegate.h */,
 				2143577A17F5CECC00607D18 /* GBAppDelegate.m */,
@@ -244,10 +290,12 @@
 		214357A017F5D1CC00607D18 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2157BBBD17FECC6500E1A5AC /* GBOfferViewPagerController.h */,
+				2157BBBE17FECC6500E1A5AC /* GBOfferViewPagerController.m */,
+				2157BBBF17FECC6500E1A5AC /* GBMainViewController.h */,
+				2157BBC017FECC6500E1A5AC /* GBMainViewController.m */,
 				214357A717F5D79A00607D18 /* GBSplashViewController.h */,
 				214357A817F5D79A00607D18 /* GBSplashViewController.m */,
-				214357AA17F5E4CF00607D18 /* GBTabBarController.h */,
-				214357AB17F5E4CF00607D18 /* GBTabBarController.m */,
 				214357AD17F5E5E500607D18 /* GBOfferViewController.h */,
 				214357AE17F5E5E500607D18 /* GBOfferViewController.m */,
 				214357B017F5E64C00607D18 /* GBTempViewController.h */,
@@ -318,6 +366,8 @@
 				214357D217F6274D00607D18 /* NSDictionary+Helpers.m */,
 				214357D317F6274D00607D18 /* NSString+Encoding.h */,
 				214357D417F6274D00607D18 /* NSString+Encoding.m */,
+				2143581C17FC8EC300607D18 /* UIBarButtonItem+ProjectButtons.h */,
+				2143581D17FC8EC300607D18 /* UIBarButtonItem+ProjectButtons.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -333,8 +383,32 @@
 				2143581417FB433C00607D18 /* GBLoadingFooterView.h */,
 				2143581517FB433C00607D18 /* GBLoadingFooterView.m */,
 				2143581717FB436600607D18 /* GBLoadingFooterView.xib */,
+				2157BBC917FF132500E1A5AC /* GBViewPagerIndicator.h */,
+				2157BBCA17FF132500E1A5AC /* GBViewPagerIndicator.m */,
+				2157BBCC17FF134200E1A5AC /* GBViewPagerIndicator.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		2143581917FC8B9600607D18 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2143581F17FC8F1D00607D18 /* backButton.png */,
+				2143582017FC8F1D00607D18 /* backButton@2x.png */,
+				2143581A17FC8BA700607D18 /* navigation-bar-bg.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		2157BBC317FED07D00E1A5AC /* ICViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				2157BBC417FED07D00E1A5AC /* README.md */,
+				2157BBC517FED07D00E1A5AC /* ViewPagerController.h */,
+				2157BBC617FED07D00E1A5AC /* ViewPagerController.m */,
+			);
+			name = ICViewPager;
+			path = "External Libraries/ICViewPager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,9 +488,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2143581B17FC8BA700607D18 /* navigation-bar-bg.png in Resources */,
+				2143582117FC8F1D00607D18 /* backButton.png in Resources */,
 				2143578317F5CECC00607D18 /* Images.xcassets in Resources */,
+				2157BBC717FED07D00E1A5AC /* README.md in Resources */,
+				2143582217FC8F1D00607D18 /* backButton@2x.png in Resources */,
 				2143577517F5CECC00607D18 /* InfoPlist.strings in Resources */,
 				2143581817FB436600607D18 /* GBLoadingFooterView.xib in Resources */,
+				2157BBCD17FF134200E1A5AC /* GBViewPagerIndicator.xib in Resources */,
 				2143580B17FB319600607D18 /* GBRefreshFooterView.xib in Resources */,
 				2143577E17F5CECC00607D18 /* iPhone.storyboard in Resources */,
 			);
@@ -443,17 +522,22 @@
 				214357D517F6274D00607D18 /* NSData+Base64.m in Sources */,
 				214357D617F6274D00607D18 /* NSDate+Helpers.m in Sources */,
 				2143577717F5CECC00607D18 /* main.m in Sources */,
+				2157BBC217FECC6500E1A5AC /* GBMainViewController.m in Sources */,
 				214357D717F6274D00607D18 /* NSDictionary+Helpers.m in Sources */,
+				2143581E17FC8EC300607D18 /* UIBarButtonItem+ProjectButtons.m in Sources */,
 				214357DF17F628CB00607D18 /* GBApiBaseTemplate.m in Sources */,
 				2143580717FB315400607D18 /* GBRefreshFooterView.m in Sources */,
 				214357BC17F616E600607D18 /* GBApiCityTemplate.m in Sources */,
-				214357AC17F5E4CF00607D18 /* GBTabBarController.m in Sources */,
 				214357E217F84C0C00607D18 /* GBOfferEssential.m in Sources */,
 				214357D817F6274D00607D18 /* NSString+Encoding.m in Sources */,
 				214357F617F8610100607D18 /* GBApiOfferEssentialsTemplate.m in Sources */,
 				214357F917F8AD6F00607D18 /* GBOfferTableViewController.m in Sources */,
+				211F4A2B17FDCED600D7C29F /* TTUITableViewZoomController.m in Sources */,
+				2157BBC117FECC6500E1A5AC /* GBOfferViewPagerController.m in Sources */,
 				214357C717F6224800607D18 /* GBURLRequest.m in Sources */,
+				2157BBCB17FF132500E1A5AC /* GBViewPagerIndicator.m in Sources */,
 				214357BF17F6170B00607D18 /* GBCityConfig.m in Sources */,
+				2157BBC817FED07D00E1A5AC /* ViewPagerController.m in Sources */,
 				214357A917F5D79A00607D18 /* GBSplashViewController.m in Sources */,
 				2143581317FB417400607D18 /* Reachability.m in Sources */,
 				214357FD17F8AEFF00607D18 /* GBOfferTableViewCell.m in Sources */,

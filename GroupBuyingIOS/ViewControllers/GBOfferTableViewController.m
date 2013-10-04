@@ -11,6 +11,7 @@
 #import "GBApiOfferEssentialsTemplate.h"
 #import "GBRefreshFooterView.h"
 #import "GBLoadingFooterView.h"
+#import "GBOfferViewController.h"
 
 #define OFFERS_PAGE_SIZE 10
 
@@ -43,6 +44,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.isLoading = YES;
     self.internetAvailable = YES;
     self.moreOffersAvailable = YES;
@@ -68,11 +70,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    self.navigationController.navigationBar.topItem.title = self.title;
 }
 
 #pragma mark - Table view data source
@@ -123,12 +120,11 @@
     if ([self.refreshControl isRefreshing]) {
         [self.refreshControl endRefreshing];
     }
-   
+
     CGRect footerRect = CGRectMake(0, 0, FOOTER_VIEW_WIDTH, FOOTER_VIEW_HEIGHT);
     GBRefreshFooterView * tableFooter = [[GBRefreshFooterView alloc] initWithFrame:footerRect];
     self.tableView.tableFooterView = tableFooter;
     tableFooter.delegate = self;
-    
     self.isLoading = NO;
 }
 
@@ -158,6 +154,13 @@
     self.isLoading = YES;
     self.internetAvailable = YES;
     [[GBApiOfferEssentialsTemplate sharedInstance] getOffersByCategory:@"shopping" AndPageNumber:(self.currentPage + 1) WithDelegate:self];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    GBOfferEssential *selectedOffer = [self.offers objectAtIndex:indexPath.row];
+    [self.parentVC performSegueWithIdentifier:@"Show Offer" sender:selectedOffer];
 }
 
 @end

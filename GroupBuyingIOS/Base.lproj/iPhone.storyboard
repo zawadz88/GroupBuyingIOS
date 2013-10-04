@@ -30,60 +30,69 @@
                         </subviews>
                         <color key="backgroundColor" red="0.44065604940000003" green="0.56020008070000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="dnN-Bj-GGg"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <segue destination="tRf-TR-Oul" kind="modal" identifier="Show Main" id="tbb-2u-poi"/>
+                        <segue destination="p5l-NU-EQf" kind="modal" identifier="Show Main" id="aBS-B5-eJk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hK3-C1-rq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1102" y="-397"/>
+            <point key="canvasLocation" x="-1772" y="-645"/>
         </scene>
-        <!--Navigation Controller - Jedynka-->
-        <scene sceneID="KNb-kt-kuX">
+        <!--Main View Controller-->
+        <scene sceneID="ZvQ-dv-LuE">
             <objects>
-                <navigationController definesPresentationContext="YES" id="IFv-xg-bLR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Jedynka" id="MgV-fd-mV4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nla-iP-VJ4">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="7eu-wA-dVx" kind="relationship" relationship="rootViewController" id="QRA-hi-xZ8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xf0-PS-lmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-303" y="-397"/>
-        </scene>
-        <!--Temp View Controller - Jedynka-->
-        <scene sceneID="QKa-Ag-FcX">
-            <objects>
-                <viewController title="Jedynka" id="7eu-wA-dVx" customClass="GBTempViewController" sceneMemberID="viewController">
+                <viewController id="pIN-Q4-4Tr" customClass="GBMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RGh-Pg-d0H"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hch-tX-n86"/>
+                        <viewControllerLayoutGuide type="top" id="frl-Rd-aLa"/>
+                        <viewControllerLayoutGuide type="bottom" id="UiI-4w-tOD"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Hly-r8-TwS">
+                    <view key="view" contentMode="scaleToFill" id="GeG-0u-LN9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSI-gc-bxc">
-                                <rect key="frame" x="111" y="297" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZHL-qn-udy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="d0c-bz-d1b" kind="embed" id="9y6-ba-bxX"/>
+                                </connections>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.5" green="0.21290808580000001" blue="0.25850199880000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Jedynka" id="Bmr-ke-esC"/>
-                    <navigationItem key="navigationItem" id="uJ7-kC-T8C">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="gSx-IH-n6d"/>
+                    <navigationItem key="navigationItem" id="Il5-ts-apY">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Oza-vS-2NL">
+                            <connections>
+                                <action selector="settingsClicked:" destination="pIN-Q4-4Tr" id="QQb-pS-1Ez"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="fHq-ef-JWK" kind="push" identifier="Show Offer" id="MsV-fT-52L"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uwu-XW-bNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEm-AM-7KR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="-397"/>
+            <point key="canvasLocation" x="-624" y="-101"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LRe-So-zMY">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="p5l-NU-EQf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e1H-ve-Ett">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pIN-Q4-4Tr" kind="relationship" relationship="rootViewController" id="kve-qC-Pc2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xn1-gC-GyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1224" y="-645"/>
         </scene>
         <!--Offer View Controller-->
         <scene sceneID="Jng-4E-yQK">
@@ -125,40 +134,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5T-Jq-ETU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="684"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="gb0-T8-6vR">
-            <objects>
-                <tabBarController definesPresentationContext="YES" id="tRf-TR-Oul" customClass="GBTabBarController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="uRl-JP-ZBR"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="r18-Ld-FhH">
-                        <rect key="frame" x="129" y="330" width="163" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="IFv-xg-bLR" kind="relationship" relationship="viewControllers" id="mTu-Ro-B0F"/>
-                        <segue destination="UD9-bt-GvM" kind="relationship" relationship="viewControllers" id="2sU-dX-13V"/>
-                        <segue destination="Ufe-rx-uLa" kind="relationship" relationship="viewControllers" id="eQF-hH-lg3"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O5O-K3-nfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1102" y="684"/>
+            <point key="canvasLocation" x="966" y="-645"/>
         </scene>
         <!--Offer Table View Controller - Trójka-->
         <scene sceneID="YSG-b0-X23">
             <objects>
-                <tableViewController title="Trójka" id="py1-XZ-eZ9" customClass="GBOfferTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" id="Foc-6o-Knp">
+                <tableViewController storyboardIdentifier="GBOfferTableViewController" title="Trójka" id="py1-XZ-eZ9" customClass="GBOfferTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" id="Foc-6o-Knp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.5" green="0.21290808580000001" blue="0.25850199880000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Offer Cell" rowHeight="200" id="PJs-NP-MlW" customClass="GBOfferTableViewCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="200"/>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="GBOfferTableViewCell" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Offer Cell" rowHeight="200" id="PJs-NP-MlW" customClass="GBOfferTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PJs-NP-MlW" id="X8p-Oq-qKA">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
@@ -167,6 +157,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfB-G0-cau">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCk-NY-n7U">
                                             <rect key="frame" x="20" y="151" width="280" height="28"/>
@@ -175,7 +166,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.91062330950382964" green="0.54756715583508031" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="imageView" destination="lfB-G0-cau" id="y4l-qs-PNd"/>
                                     <outlet property="titleLabel" destination="vCk-NY-n7U" id="gCu-TE-T4k"/>
@@ -188,6 +182,7 @@
                             <outlet property="delegate" destination="py1-XZ-eZ9" id="rOk-XW-opk"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Trójka" id="1qp-za-lKg"/>
                     <navigationItem key="navigationItem" id="gWY-Hf-YPO">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="5nI-QG-neJ"/>
@@ -206,44 +201,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Z9-tc-2Cw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="326" y="1386"/>
-        </scene>
-        <!--Navigation Controller - Trójka-->
-        <scene sceneID="gTJ-rY-2Za">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="Ufe-rx-uLa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Trójka" id="ejt-Jo-9iz"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eSQ-Hd-QmU">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="py1-XZ-eZ9" kind="relationship" relationship="rootViewController" id="qtC-Pa-iCJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VdE-Mp-4AN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-467" y="1386"/>
-        </scene>
-        <!--Navigation Controller - Dwójka-->
-        <scene sceneID="A8c-oC-jAH">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="UD9-bt-GvM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dwójka" id="ahy-Dn-tL7"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ing-tH-hGQ">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="gqr-x9-ccx" kind="relationship" relationship="rootViewController" id="Kbv-zI-s5I"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BPc-Fu-jFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-303" y="684"/>
+            <point key="canvasLocation" x="438" y="479"/>
         </scene>
         <!--Temp View Controller - Dwojka-->
         <scene sceneID="1Et-cR-QdG">
             <objects>
-                <viewController title="Dwojka" id="gqr-x9-ccx" customClass="GBTempViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GBTempViewController" title="Dwojka" id="gqr-x9-ccx" customClass="GBTempViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="96n-p5-kXl"/>
                         <viewControllerLayoutGuide type="bottom" id="04e-YH-uRT"/>
@@ -271,13 +234,39 @@
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="sRs-X0-uO7"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <connections>
-                        <segue destination="fHq-ef-JWK" kind="push" identifier="Show Offer" id="sTP-71-w7s"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j99-Dr-Uvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="684"/>
+            <point key="canvasLocation" x="-1336" y="132"/>
+        </scene>
+        <!--Offer View Pager Controller-->
+        <scene sceneID="9aQ-O0-HAw">
+            <objects>
+                <viewController storyboardIdentifier="HostViewController" automaticallyAdjustsScrollViewInsets="NO" id="d0c-bz-d1b" customClass="GBOfferViewPagerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EUx-Of-VS2"/>
+                        <viewControllerLayoutGuide type="bottom" id="KTK-Eu-XF8"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Wf4-VA-MHZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="7" translatesAutoresizingMaskIntoConstraints="NO" id="li0-YN-FKF">
+                                <rect key="frame" x="20" y="0.0" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.20275597679999999" blue="0.24348517389999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="pageControl" destination="li0-YN-FKF" id="AgF-8a-5bj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8zL-Qn-iud" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71" y="532"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -26,4 +26,13 @@
     // Configure the view for the selected state
 }
 
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    if (highlighted) {
+        self.backgroundColor = [UIColor grayColor];
+    } else {
+        self.backgroundColor = [UIColor greenColor];
+    }
+}
+
 @end

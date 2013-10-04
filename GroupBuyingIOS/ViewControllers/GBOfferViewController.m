@@ -7,6 +7,7 @@
 //
 
 #import "GBOfferViewController.h"
+#import "UIBarButtonItem+ProjectButtons.h"
 
 @interface GBOfferViewController () <UIScrollViewDelegate>
 
@@ -28,7 +29,10 @@ BOOL pageControlBeingUsed;
     pageControlBeingUsed = YES;
 }
 - (void)viewDidLoad {
+    DLog(@"offerId: %d", self.offerId);
     [super viewDidLoad];
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem backArrowButtonWithTarget:self.navigationController action:@selector(popViewControllerAnimated:)];
     
     NSArray *colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor greenColor], [UIColor blueColor], nil];
     for (int i = 0; i < colors.count; i++) {

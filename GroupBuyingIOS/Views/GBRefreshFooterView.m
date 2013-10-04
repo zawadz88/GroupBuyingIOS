@@ -10,7 +10,7 @@
 
 @implementation GBRefreshFooterView
 
--(void)awakeFromNib {
+- (void)awakeFromNib {
     [[NSBundle mainBundle] loadNibNamed:@"GBRefreshFooterView" owner:self options:nil];
     [self addSubview: self.contentView];
 }
