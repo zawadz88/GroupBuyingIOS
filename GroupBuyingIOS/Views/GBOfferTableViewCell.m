@@ -8,6 +8,9 @@
 
 #import "GBOfferTableViewCell.h"
 
+#define CELL_WIDTH 320
+#define CELL_HEIGHT 200
+
 @implementation GBOfferTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -33,6 +36,11 @@
     } else {
         self.backgroundColor = [UIColor greenColor];
     }
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.imageView.frame = CGRectMake(0, 0, CELL_WIDTH, CELL_HEIGHT);
 }
 
 @end

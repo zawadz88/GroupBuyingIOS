@@ -80,4 +80,12 @@
     return category;
 }
 
+- (CGFloat)imageHeight
+{
+    if (!_imageHeight) {
+        _imageHeight = 200;
+    }
+    return _imageHeight;
+}
+
 @end

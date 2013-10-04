@@ -12,6 +12,7 @@
 #import "GBRefreshFooterView.h"
 #import "GBLoadingFooterView.h"
 #import "GBOfferViewController.h"
+#import "UIImageView+WebCache.h"
 
 #define OFFERS_PAGE_SIZE 10
 
@@ -19,8 +20,8 @@
 #define FOOTER_VIEW_HEIGHT 60
 #define FOOTER_VIEW_WIDTH 320
 
-#define CUSTOM_CELL_ZOOM_X_SCALE_FACTOR 2.0
-#define CUSTOM_CELL_ZOOM_Y_SCALE_FACTOR 1.5
+#define CUSTOM_CELL_ZOOM_X_SCALE_FACTOR 1.5
+#define CUSTOM_CELL_ZOOM_Y_SCALE_FACTOR 1.2
 
 @interface GBOfferTableViewController() <GBApiOfferEssentialsTemplateDelegate, GBRefreshFooterViewDelegate>
 
@@ -95,12 +96,30 @@
 {
     static NSString *cellIdentifier = @"Offer Cell";
     GBOfferTableViewCell *cell = (GBOfferTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    [cell.titleLabel setText:((GBOfferEssential *)[self.offers objectAtIndex:indexPath.row]).title];
-    
-    // Configure the cell...
+    GBOfferEssential *offer = (GBOfferEssential *)[self.offers objectAtIndex:indexPath.row];
+    [cell.titleLabel setText:offer.title];
+    [cell.imageView setImageWithURL:[NSURL URLWithString:offer.imageUrl]
+                   placeholderImage:[UIImage imageNamed:@"image_stub.jpg"]
+                          completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+                              if (cacheType == SDImageCacheTypeNone) {                                  
+                                  [self.tableView reloadData];
+                              }
+                          }];
     
     return cell;
 }
+//
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    CGFloat height = 200.0;
+//    GBOfferEssential *offer = (GBOfferEssential *)[self.offers objectAtIndex:indexPath.row];
+//    UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:[[NSURL URLWithString:offer.imageUrl] absoluteString]];
+//    DLog(@"Image: %@", image);
+//    if (image) {
+//        height = image.size.height * 320 / image.size.width;
+//    }
+//    return height;
+//}
 
 - (void)getOfferEssentialsDidSucceedWithResults:(NSArray *)newOffers
 {

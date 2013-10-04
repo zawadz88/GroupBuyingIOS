@@ -22,6 +22,9 @@
 @property (strong, nonatomic) NSNumber *longitude;
 @property (nonatomic) NSInteger soldCount;
 
+//for internal use
+@property (nonatomic) CGFloat imageHeight;
+
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
