@@ -16,8 +16,6 @@
 #import <CoreData/CoreData.h>
 #endif
 
-#define DEBUG true
-
 // Debug Logging
 #import "DLog.h"
 

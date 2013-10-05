@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define OFFLINE true
+
 @interface GBConnectionSettings : NSObject
 
 + (NSString *)clientId;

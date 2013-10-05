@@ -32,7 +32,29 @@
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
 	[request setTimeoutInterval:DEFAULT_REQUEST_TIMEOUT];
 	DLog(@"%@", request);
-	
+
+#if OFFLINE
+    DLog(@"OFFLINE REQUEST: %@", request);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
+        GBOfferEssential *offer1 = [[GBOfferEssential alloc] init];
+        offer1.offerId = 1;
+        offer1.title = @"Offer1";
+        offer1.imageUrl = @"http://niuniacat.blox.pl/resource/00033434.jpg";
+        GBOfferEssential *offer2 = [[GBOfferEssential alloc] init];
+        offer2.offerId = 2;
+        offer2.title = @"Offer2";
+        offer2.imageUrl = @"http://shadow.pl/tellamarna/galeria/zdjecie_08.jpg";
+        GBOfferEssential *offer3 = [[GBOfferEssential alloc] init];
+        offer3.offerId = 3;
+        offer3.title = @"Offer3";
+        offer3.imageUrl = @"http://www.ekoenergia.pl/uploaded/Image/zdjecia_wesele/wielkie_zarcie_2.jpg";
+        NSArray *offlineOffers = @[offer1, offer2, offer3];
+        [delegate getOfferEssentialsDidSucceedWithResults:offlineOffers];
+    });
+    
+    return;
+#endif
+
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[[NSOperationQueue alloc] init]
