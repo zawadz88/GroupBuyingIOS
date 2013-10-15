@@ -20,8 +20,8 @@ typedef NS_ENUM(NSUInteger, ViewPagerComponent) {
 
 @interface ViewPagerController : UIViewController
 
-@property id<ViewPagerDataSource> dataSource;
-@property id<ViewPagerDelegate> delegate;
+@property(weak) id<ViewPagerDataSource> dataSource;
+@property(weak) id<ViewPagerDelegate> delegate;
 @property NSMutableArray *indicators; //of id<ViewPagerIndicatorDelegate>
 
 @property (nonatomic, readonly) NSUInteger activeTabIndex;
